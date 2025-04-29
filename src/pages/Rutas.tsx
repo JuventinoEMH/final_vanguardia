@@ -1,5 +1,3 @@
-// src/pages/dashboard/Rutas.tsx
-
 import { useState } from 'react';
 import RouteForm from '../components/routes/RouteForm';
 import RouteTable from '../components/routes/RouteTable';
@@ -26,31 +24,3 @@ export default function Rutas() {
 
 
 
-// import RutaForm from '../components/routes/RouteForm';
-// import RutasFilter from '../components/RutasFilter';
-// import RutasTable from '../components/routes/RouteTable';
-// import MapaRutas from '../components/MapaRutas';
-
-// export default function Rutas() {
-//   return (
-//     <div>
-//       <h2 className="text-2xl font-bold mb-4">Rutas</h2>
-//       <p className="mb-6 text-gray-200">Administra, visualiza y configura las rutas del sistema.</p>
-
-//       <RutaForm />
-//       <RutasFilter />
-//       <RutasTable />
-//       <MapaRutas />
-//     </div>
-//   );
-// }
-
-
-// // export default function Rutas() {
-// //   return (
-// //     <div>
-// //       <h2 className="text-2xl font-bold">Rutas</h2>
-// //       <p>Aquí se gestionarán las rutas.</p>
-// //     </div>
-// //   );
-// // }

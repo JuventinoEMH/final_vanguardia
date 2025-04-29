@@ -1,5 +1,3 @@
-// src/components/routes/RouteForm.tsx
-
 import { useState } from 'react';
 import { Ruta } from './types';
 
@@ -70,21 +68,3 @@ export default function RouteForm({ onAddRuta }: Props) {
     </form>
   );
 }
-
-
-
-// export default function RutaForm() {
-//   return (
-//     <div className="bg-white text-black p-4 rounded shadow mb-6">
-//       <h3 className="text-xl font-semibold mb-2">Agregar Nueva Ruta</h3>
-//       <form className="space-y-4">
-//         <input type="text" placeholder="Nombre de la ruta" className="w-full border p-2 rounded" />
-//         <input type="text" placeholder="Punto de origen" className="w-full border p-2 rounded" />
-//         <input type="text" placeholder="Punto de destino" className="w-full border p-2 rounded" />
-//         <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">
-//           Guardar Ruta
-//         </button>
-//       </form>
-//     </div>
-//   );
-// }
