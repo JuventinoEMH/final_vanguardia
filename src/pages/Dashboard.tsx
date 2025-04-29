@@ -25,9 +25,9 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex h-screen bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+    <div className="flex h-screen bg-gradient-to-br  from-gray-900 to-gray-700 text-white">
       {/* Sidebar */}
-      <div className={`${sidebarOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-gray-800 p-4 flex flex-col`}>
+      <div className={`${sidebarOpen ? 'w-64' : 'w-16'} transition-all duration-300  to-gray-700  p-4 flex flex-col`}>
         <button onClick={toggleSidebar} className="mb-4 text-white text-2xl hover:text-blue-400">
           {sidebarOpen ? <FiChevronLeft /> : <FiMenu />}
         </button>
