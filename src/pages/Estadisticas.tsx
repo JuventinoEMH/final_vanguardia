@@ -5,8 +5,7 @@ import PieChartExample from '../components/PieChartExample';
 export default function Estadisticas() {
   return (
     <div className="space-y-8">
-      <h2 className="text-2xl font-bold">Estadísticas</h2>
-      <p>Aquí se mostrarán las estadísticas de uso.</p>
+      <h2 className="text-2xl font-bold text-center mb-10 mt-7">Estadísticas</h2>
 
       <BarChartExample />
       <LineChartExample/>

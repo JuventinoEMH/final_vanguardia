@@ -31,37 +31,39 @@ export default function SensorEventsTable() {
   });
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md mt-4">
-      <h3 className="text-xl font-semibold mb-4 text-black">Registros de Sensores</h3>
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto mt-6">
+      <h3 className="text-2xl font-semibold mb-6 text-gray-800">Registros de Sensores</h3>
 
-      <div className="mb-4">
-        <label htmlFor="evento" className="mr-2 text-black">Filtrar por evento:</label>
+      <div className="mb-6">
+        <label htmlFor="evento" className="mr-2 text-gray-700 font-medium">Filtrar por evento:</label>
         <input
           id="evento"
           type="text"
           value={filters.evento}
           onChange={handleFilterChange}
           placeholder="Activación, Desactivación"
-          className="border p-2 rounded text-black"
+          className="border border-gray-300 p-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
-      <table className="min-w-full table-auto border-collapse">
-        <thead>
+      <table className="min-w-full table-auto text-sm">
+        <thead className="bg-gray-100 text-gray-600">
           <tr>
-            <th className="border p-2 text-black">ID Evento</th>
-            <th className="border p-2 text-black">ID Sensor</th>
-            <th className="border p-2 text-black">Evento</th>
-            <th className="border p-2 text-black">Fecha</th>
+            <th className="py-3 px-4 text-left font-medium">ID Evento</th>
+            <th className="py-3 px-4 text-left font-medium">ID Sensor</th>
+            <th className="py-3 px-4 text-left font-medium">Evento</th>
+            <th className="py-3 px-4 text-left font-medium">Fecha</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-gray-200">
           {filteredEvents.map(event => (
-            <tr key={event.id}>
-              <td className="border p-2 text-black">{event.id}</td>
-              <td className="border p-2 text-black">{event.sensorId}</td>
-              <td className="border p-2 text-black">{event.evento}</td>
-              <td className="border p-2 text-black">{event.fecha}</td>
+            <tr key={event.id} className="hover:bg-gray-50 transition-colors">
+              <td className="py-3 px-4 text-gray-800">{event.id}</td>
+              <td className="py-3 px-4 text-gray-800">{event.sensorId}</td>
+              <td className={`py-3 px-4 font-semibold ${event.evento === 'Activación' ? 'text-green-600' : 'text-red-600'}`}>
+                {event.evento}
+              </td>
+              <td className="py-3 px-4 text-gray-800">{event.fecha}</td>
             </tr>
           ))}
         </tbody>

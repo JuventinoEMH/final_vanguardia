@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Ruta } from './types';
 
@@ -25,43 +26,48 @@ export default function RouteForm({ onAddRuta }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-white p-4 rounded shadow-md text-black">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-xl shadow-lg max-w-lg mx-auto">
+      <h2 className="text-2xl font-semibold text-gray-800">Agregar Ruta</h2>
+
       <div>
-        <label className="block font-semibold">Nombre de la Ruta</label>
+        <label className="block font-medium text-gray-700">Nombre de la Ruta</label>
         <input
           type="text"
           name="nombre"
           value={formData.nombre}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
+
       <div>
-        <label className="block font-semibold">Origen</label>
+        <label className="block font-medium text-gray-700">Origen</label>
         <input
           type="text"
           name="origen"
           value={formData.origen}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
+
       <div>
-        <label className="block font-semibold">Destino</label>
+        <label className="block font-medium text-gray-700">Destino</label>
         <input
           type="text"
           name="destino"
           value={formData.destino}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
+
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
       >
         Agregar Ruta
       </button>
