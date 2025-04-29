@@ -24,7 +24,7 @@ const data: LineData[] = [
 export default function LineChartExample() {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md text-black">
-      <h3 className="text-xl font-semibold mb-4">Visitantes por día</h3>
+      <h3 className="text-xl font-semibold mb-4">Descargas por día</h3>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
