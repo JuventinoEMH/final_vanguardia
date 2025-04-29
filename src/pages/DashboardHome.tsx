@@ -2,7 +2,7 @@ export default function DashboardHome() {
   return (
     <div className="bg-white p-8 rounded-lg text-[#1E3A8A]">
       <h1 className="text-4xl font-bold mb-6 text-center animate__animated animate__fadeIn">
-        Welcome
+        Bienvenido
       </h1>
 
       <div className="bg-[#F9FAFB] p-6 rounded-lg shadow-lg mb-6 hover:scale-105 transform transition duration-300 ease-in-out">

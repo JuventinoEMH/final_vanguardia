@@ -26,37 +26,39 @@ export default function SensorTable() {
   });
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold mb-4 text-black ">Sensores Activos</h3>
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Sensores Activos</h3>
       
-      <div className="mb-4">
-        <label htmlFor="estado" className="mr-2 text-black">Filtrar por estado:</label>
+      <div className="mb-6">
+        <label htmlFor="estado" className="mr-2 text-gray-700 font-medium">Filtrar por estado:</label>
         <input
           id="estado"
           type="text"
           value={filters.estado}
           onChange={handleFilterChange}
           placeholder="Activo o Inactivo"
-          className="border p-2 rounded text-black"
+          className="border border-gray-300 p-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
-      <table className="min-w-full table-auto border-collapse">
-        <thead>
+      <table className="min-w-full table-auto text-sm">
+        <thead className="bg-gray-100 text-gray-600">
           <tr>
-            <th className="border p-2 text-black">ID</th>
-            <th className="border p-2 text-black">Nombre</th>
-            <th className="border p-2 text-black">Estado</th>
-            <th className="border p-2 text-black">Fecha de Activación</th>
+            <th className="py-3 px-4 text-left font-medium">ID</th>
+            <th className="py-3 px-4 text-left font-medium">Nombre</th>
+            <th className="py-3 px-4 text-left font-medium">Estado</th>
+            <th className="py-3 px-4 text-left font-medium">Fecha de Activación</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-gray-200">
           {filteredData.map(sensor => (
-            <tr key={sensor.id}>
-              <td className="border p-2 text-black">{sensor.id}</td>
-              <td className="border p-2 text-black">{sensor.nombre}</td>
-              <td className="border p-2 text-black">{sensor.estado}</td>
-              <td className="border p-2 text-black">{sensor.fechaActivacion}</td>
+            <tr key={sensor.id} className="hover:bg-gray-50 transition-colors">
+              <td className="py-3 px-4 text-gray-800">{sensor.id}</td>
+              <td className="py-3 px-4 text-gray-800">{sensor.nombre}</td>
+              <td className={`py-3 px-4 font-semibold ${sensor.estado === 'Activo' ? 'text-green-600' : 'text-red-600'}`}>
+                {sensor.estado}
+              </td>
+              <td className="py-3 px-4 text-gray-800">{sensor.fechaActivacion}</td>
             </tr>
           ))}
         </tbody>

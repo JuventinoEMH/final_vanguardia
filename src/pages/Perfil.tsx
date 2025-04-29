@@ -1,8 +1,7 @@
 export default function Perfil() {
   return (
     <div>
-      <h2 className="text-2xl font-bold">Perfil del Usuario</h2>
-      <p>Aquí se podrá ver y editar el perfil.</p>
+      <h2 className="text-2xl font-bold text-center mt-7">Perfil de Usuario</h2>
     </div>
   );
 }
